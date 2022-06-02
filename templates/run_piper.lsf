@@ -1,0 +1,10 @@
+#!/bin/sh
+#INPUT VARIABLE,query_file
+
+#BSUB -J piper
+
+QUERY="{{.query_file}}" 
+
+RUN_PIPER=src/run_piper_lsf.py 
+
+python $RUN_PIPER -q $QUERY 2>&1

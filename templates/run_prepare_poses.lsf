@@ -1,0 +1,10 @@
+#!/bin/sh
+#INPUT VARIABLE,inputs_file
+
+#BSUB -J prep_pose
+
+INPUT_PATH="{{.inputs_file}}"
+
+RUN_POSES=src/prepare_poses.py
+
+python $RUN_POSES -q $INPUT_PATH 2>&1

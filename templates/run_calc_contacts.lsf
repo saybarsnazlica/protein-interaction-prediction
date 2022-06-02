@@ -1,0 +1,14 @@
+#!/bin/sh
+#INPUT CONSTANT,out_folder
+#INPUT CONSTANT,piper_complexes_dir
+#INPUT VARIABLE,id
+
+#BSUB -J CONT_CALC
+
+OUT_FOLDER="{{.out_folder}}"
+PIPER_COMPLEXES_DIR="{{.piper_complexes_dir}}"
+ID="{{.id}}"
+
+RUN_CONTACT_CALC=src/calc_contacts.py
+
+python $RUN_CONTACT_CALC -o $OUT_FOLDER -p $PIPER_COMPLEXES_DIR -i $ID 2>&1

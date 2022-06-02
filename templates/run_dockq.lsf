@@ -1,0 +1,10 @@
+#!/bin/sh
+#INPUT VARIABLE,query_file
+
+#BSUB -J dockq 
+
+QUERY="{{.query_file}}" 
+
+RUN_DOCKQ=src/calc_dockq.py 
+
+python $RUN_DOCKQ -q $QUERY 2>&1
