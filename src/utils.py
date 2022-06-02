@@ -85,7 +85,7 @@ def prep_data(input_files: list, regressor_path: str, svd_model_path: str):
         else:
             target_scores = predict_target(target_feat, regressor_path)
             binary_target = binarize(target_scores)
-            # features = reduce_dimensions(features, svd_model_path)
+            features = reduce_dimensions(features, svd_model_path)
             target_data.append(binary_target)
             feat_data.append(features)
 

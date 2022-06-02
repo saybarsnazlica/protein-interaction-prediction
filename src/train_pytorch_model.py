@@ -293,8 +293,8 @@ def main():
     )
 
     param = TrainParameter(
-        epoch=10,
-        inputs_dim=14_028,
+        epoch=25,
+        inputs_dim=500,
         learning_rate=0.001,
     )
 
