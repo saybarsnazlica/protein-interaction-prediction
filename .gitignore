@@ -1,0 +1,15 @@
+# Python
+__pycache__
+
+# Jupyter Notebooks
+*.ipynb_checkpoints/
+
+# Tensorboard run dir
+runs/
+logs/
+
+# Temporary work dir
+tmp/
+
+# DockQ and PIPER
+lib/
